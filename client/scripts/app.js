@@ -4,7 +4,7 @@
     '<': '&lt;',
     '>': '&gt;',
     '"': '&quot;',
-    "'": '&#39;',
+    //"'": '&#39;',
     '/': '&#x2F;',
     '`': '&#x60;',
     '=': '&#x3D;'
@@ -20,7 +20,7 @@
       var username = data.results[i].username;
       var text = escapeHtml(data.results[i].text);
       var timeStamp = data.results[i].createdAt;
-      var $message = `<p><div class="username">Username: ${username} </div> <br/>Message: ${text} <br/>Time Stamp: ${timeStamp}</p>`;
+      var $message = `<p><div class="username">Username: ${username} </div> <br/>Message: ${text} <br/>Time Stamp: ${timeStamp}  Room:</p>`;
       $('#chats').append($message);
     }
   };
@@ -77,7 +77,7 @@
       //headers: {'Access-Control-Allow-Origin *'},
       success: function (data) { 
         app.init(data);
-        console.log(data);
+        //console.log(data);
       },
       error: function (data) {
         // See: https://developer.mozilla.org/en-US/docs/Web/API/console.error
