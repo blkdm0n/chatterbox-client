@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
   <head>
     <meta charset="utf-8">
@@ -7,6 +7,9 @@
 
     <!-- dependencies -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+    <script>var user = window.location.search.slice(10);</script>
     <script>
       // YOU DO NOT NEED TO EDIT THIS CODE
       if (!/(&|\?)username=/.test(window.location.search)) {
@@ -15,18 +18,25 @@
           newSearch += '&';
         }
         newSearch += 'username=' + (prompt('What is your name?') || 'anonymous');
-        window.location.search = newSearch;
+        window.location.search = newSearch; 
       }
     </script>
-    <!-- your scripts -->
+    
     <script src="env/config.js"></script>
     <script src="scripts/app.js"></script>
   </head>
   <body>
     <div id="main">
       <h1>chatterbox</h1>
-      <!-- Your HTML goes here! -->
+      
     </div>
-    <div id="chats"></div>
+      <div>
+        <input id="message"> <button id="submit">SUBMIT</button>
+      </div>
+    <div id="chats">
+      
+      
+    </div>
+    
   </body>
 </html>
