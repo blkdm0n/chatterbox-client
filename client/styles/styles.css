@@ -2,17 +2,20 @@ body {
     background: #eee;
     text-align: center;
     padding: 0 25px;
-    font-family: arial, sans-serif;
+    font-family: monospace,arial, sans-serif;
+    background-image: url(http://img.freepik.com/free-vector/blue-geometric-technological-background_1055-1907.jpg?size=338&ext=jpg);
+    background-size: cover;
 }
 
 #main, #chats {
     width: 500px;
     margin: auto;
     text-align: left;
-    background: white;
+    background: #F0F8FF;
     padding: 50px 60px;
     border: solid #ddd;
     border-width: 0 1px 1px 1px;
+    color: orange;
 }
 
 #main h1 {
@@ -53,10 +56,11 @@ form {
 }
 
 form input[type=text] {
-    margin-right: 10px;
-    width: 70%;
+    margin-right: 100px;
+    width: 100%;
     font-size: 12px;
     padding: 5px;
+    
 }
 
 .chat {
@@ -87,5 +91,14 @@ form input[type=text] {
     color: #fff;
     background-color: #0090da;
 }
+
+select {
+    width: 250px
+}
+
+
+
+
+
 
 
